@@ -18,6 +18,8 @@ function deleteToDo(event) {
   // 삭제하고 싶은 list가 저장
   li.remove();
   // list 제거
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 function paintToDo(newTodo) {
   const li = document.createElement("li");
